@@ -53,8 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\Player1_Move.cs" />
      <Compile Include="Assets\Scripts\Player2_Move.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/home/Documents/HTV4_Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
