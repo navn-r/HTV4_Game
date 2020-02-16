@@ -41,11 +41,6 @@ public class Player1_Move : MonoBehaviour
                 rb.velocity = Vector2.right * velX;
             }
         }
-
-        Vector2 pos = transform.position;
-        pos.x = Mathf.Clamp (pos.x, -Screen.width, Screen.width);
-        pos.y = Mathf.Clamp (pos.y, -Screen.height, Screen.height);
-        transform.position = pos;
     }
 
     void OnCollisionEnter2D(Collision2D col){

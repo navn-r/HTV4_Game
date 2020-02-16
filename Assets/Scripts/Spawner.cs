@@ -17,16 +17,14 @@ public class Spawner : MonoBehaviour
     private IEnumerator Start()
     {
          this.enabled = false; // Disable us while waiting
- 
          // Wait for input
          while (!Input.anyKey)
          {
              yield return null;
          }
- 
+         
          this.enabled = true; // Enable us now
      }
-
     void Update()
     {
         if(timeBetwnSpawn <= 0)
