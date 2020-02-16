@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    public float speed;
+    public int deathCounter = 0;
+    float speed = 5;
     void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -16,11 +17,13 @@ public class EnemyMove : MonoBehaviour
             collide.GetComponent<Player1_Move>().isDead = true;
             Debug.Log(collide.GetComponent<Player1_Move>().isDead);
             Application.LoadLevel(Application.loadedLevel);
+            deathCounter++;
 
         } if (collide.CompareTag("Player2")) {
             collide.GetComponent<Player2_Move>().isDead = true;
             Debug.Log(collide.GetComponent<Player2_Move>().isDead);
             Application.LoadLevel(Application.loadedLevel);
+            deathCounter++;
 
         } 
     }
